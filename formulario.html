@@ -17,13 +17,6 @@
       min-height: 100vh;
       flex-direction: column;
     }
-<div class="container-nuvem">
-  <img src="imagens/NOVA LOGO preta.png" alt="Logo" class="logo" />
-  <div id="iframeContainer"></div>
-  <div class="botoes-voltar">
-    <a href="index.html"><button class="btn">⬅ Voltar à Página Inicial</button></a>
-  </div>
-</div>
 
     .container-nuvem {
       background-color: #111;
@@ -47,6 +40,25 @@
       border: none;
       border-radius: 20px;
     }
+
+    .botoes-voltar {
+      margin-top: 30px;
+    }
+
+    .btn {
+      background-color: #00c853;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 16px;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #00e676;
+    }
   </style>
 </head>
 <body>
@@ -55,6 +67,9 @@
     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeBc3SIuIpQhz0LmjVTZkzX-pKIy0CjCLdTuPIeqaXK4L53pA/viewform?embedded=true">
       Carregando…
     </iframe>
+    <div class="botoes-voltar">
+      <a href="index.html"><button class="btn">⬅ Voltar à Página Inicial</button></a>
+    </div>
   </div>
 </body>
 </html>
