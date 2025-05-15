@@ -93,3 +93,21 @@ footer {
   width: 100%;
   text-align: center;
 }
+.btn-acessar-promotores {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  background-color: #1976d2;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  text-decoration: none;
+  z-index: 999;
+  transition: background-color 0.3s ease;
+}
+
+.btn-acessar-promotores:hover {
+  background-color: #0d47a1;
+}
