@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <link rel="icon" href="imagens/Favicon-juka.png" type="image/png" />
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Formulário Irani</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+  <link rel="icon" href="imagens/Favicon-juka.png" type="image/png" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet" />
 
   <style>
     body {
@@ -18,6 +19,7 @@
       align-items: center;
       min-height: 100vh;
       flex-direction: column;
+      padding-bottom: 80px; /* espaço para footer fixo */
     }
 
     .container-nuvem {
@@ -49,10 +51,32 @@
       border-radius: 12px;
       cursor: pointer;
       transition: background-color 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
     }
 
     .btn:hover {
       background-color: #00e676;
+    }
+
+    iframe {
+      border-radius: 20px;
+      border: none;
+      width: 100%;
+      min-height: 850px;
+    }
+
+    footer {
+      width: 100%;
+      padding: 16px 0;
+      background-color: #111;
+      color: #aaa;
+      text-align: center;
+      font-size: 0.875rem;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      box-shadow: 0 -2px 8px rgba(0,0,0,0.5);
     }
   </style>
 
@@ -86,12 +110,7 @@
 
       const iframe = document.createElement("iframe");
       iframe.src = url;
-      iframe.width = "100%";
-      iframe.height = "850";
-      iframe.frameBorder = "0";
-      iframe.marginHeight = "0";
-      iframe.marginWidth = "0";
-      iframe.style.borderRadius = "20px";
+      iframe.title = `Formulário Google da Loja ${loja}`;
       container.appendChild(iframe);
     }
 
@@ -103,11 +122,12 @@
     <img src="imagens/NOVA LOGO preta.png" alt="Logo Irani" />
     <div id="iframeContainer"></div>
     <div class="botoes-voltar">
-      <a href="index.html"><button class="btn">⬅ Voltar à Página Inicial</button></a>
+      <a href="index.html" class="btn" aria-label="Voltar para a página inicial">⬅ Voltar à Página Inicial</a>
     </div>
   </div>
 
-  <footer class="w-full py-4 bg-gray-900 text-center text-gray-400 text-sm fixed bottom-0">
+  <footer>
     <p>© 2025 Grupo Irani. Todos os direitos reservados. Desenvolvido por Juka Produções. Versão 1.0.0</p>
   </footer>
 </body>
+</html>
