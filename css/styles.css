@@ -3,7 +3,7 @@
 
 body {
   margin: 0;
-  padding: 0;
+  padding: 0 0 60px 0; /* espaço para o footer fixo */
   background-color: #000;
   font-family: 'Ubuntu', sans-serif;
   color: white;
@@ -12,6 +12,7 @@ body {
   align-items: center;
   min-height: 100vh;
   text-align: center;
+  flex-direction: column;
 }
 
 /* Container com efeito nuvem */
@@ -22,7 +23,7 @@ body {
   padding: 40px;
   text-align: center;
   position: relative;
-  box-shadow: 0 0 30px 15px rgba(0, 200, 83, 0.25); /* #00C853 com alpha */
+  box-shadow: 0 0 30px 15px rgba(0, 200, 83, 0.25);
   animation: pulsarVerde 4s infinite ease-in-out;
   max-width: 1000px;
   width: 90%;
@@ -35,18 +36,12 @@ body {
   margin-bottom: 30px;
 }
 
-/* Botões em coluna ou grid */
-.botoes,
+/* Grid de botões */
 .grid-botoes {
   display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.grid-botoes {
-  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 15px;
 }
 
 /* Botões padrão */
@@ -62,38 +57,10 @@ body {
 }
 
 .btn:hover {
-  background-color: #1f7135;
+  background-color: #00e676;
 }
 
-/* Efeito nuvem pulsando */
-@keyframes pulsarVerde {
-  0%, 100% {
-    box-shadow: 0 0 30px 15px rgba(0, 200, 83, 0.25);
-  }
-  50% {
-    box-shadow: 0 0 40px 25px rgba(0, 200, 83, 0.45);
-  }
-}
-
-/* Iframe dos formulários */
-.iframe-form {
-  width: 100%;
-  height: 850px;
-  border: none;
-  border-radius: 20px;
-  margin-top: 30px;
-}
-
-/* Rodapé opcional */
-footer {
-  margin-top: 3rem;
-  padding: 1rem;
-  background-color: #1f7135;
-  color: white;
-  width: 100%;
-  text-align: center;
-}
-
+/* Botão fixo no topo */
 .btn-acessar-promotores {
   position: fixed;
   top: 16px;
@@ -111,4 +78,29 @@ footer {
 
 .btn-acessar-promotores:hover {
   background-color: #0d47a1;
+}
+
+/* Efeito pulsar verde */
+@keyframes pulsarVerde {
+  0%, 100% {
+    box-shadow: 0 0 30px 15px rgba(0, 200, 83, 0.25);
+  }
+  50% {
+    box-shadow: 0 0 40px 25px rgba(0, 200, 83, 0.45);
+  }
+}
+
+/* Rodapé fixo */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  background-color: #1f7135;
+  color: white;
+  text-align: center;
+  z-index: 1000;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.3);
+  font-size: 0.9rem;
 }
